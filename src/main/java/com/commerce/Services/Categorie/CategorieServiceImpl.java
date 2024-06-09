@@ -1,13 +1,13 @@
 package com.commerce.Services.Categorie;
 
-import com.commerce.Controllers.Categorie.Categorie;
+import com.commerce.Models.Categorie;
 import com.commerce.Repository.CategorieRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class CategorieServiceImpl  implements CategorieService{
+public class CategorieServiceImpl implements CategorieService{
 
     private final CategorieRepository categorieRepository;
 

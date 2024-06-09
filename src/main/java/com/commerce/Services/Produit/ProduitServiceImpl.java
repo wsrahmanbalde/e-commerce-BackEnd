@@ -26,6 +26,11 @@ public class ProduitServiceImpl  implements ProduitService{
     }
 
     @Override
+    public void delete(Long id) {
+        this.produitRepository.deleteById(id);
+    }
+
+    @Override
     public List<Produit> getAllProduit() {
         return this.produitRepository.findAll();
     }

@@ -10,6 +10,8 @@ public interface ProduitService {
 
     Produit update(Produit produit);
 
+    void delete(Long id);
+
     List<Produit> getAllProduit();
 
     Produit getProduitById(Long id);

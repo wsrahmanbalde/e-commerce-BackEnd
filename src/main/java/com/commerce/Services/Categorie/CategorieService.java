@@ -1,6 +1,7 @@
 package com.commerce.Services.Categorie;
 
-import com.commerce.Controllers.Categorie.Categorie;
+import com.commerce.Models.Categorie;
+import com.commerce.Repository.CategorieRepository;
 
 import java.util.List;
 
