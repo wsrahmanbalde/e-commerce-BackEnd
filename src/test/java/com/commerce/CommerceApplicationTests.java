@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.Date;
+import java.util.List;
 
 @SpringBootTest
 class CommerceApplicationTests {
@@ -14,14 +15,22 @@ class CommerceApplicationTests {
 	@Autowired
 	private ProduitRepository repository;
 	@Test
-	void contextLoads() {
-		repository.save( new Produit(1,"nom",12D,new Date())
-		);
+	public void testFindByNomProduit()
+	{
+		List<Produit> prods = repository.findByNom("Iphone 15 pro");
+		for (Produit p : prods)
+		{
+			System.out.println(p);
+		}
 	}
 
 	@Test
-	void contextLoad() {
-		System.out.println(repository.findAll());
-	}
+	public void testFindByNomProduitContains ()
+	{
+		List<Produit> prods=repository.findByNomContains("Iphone");
+		for (Produit p : prods)
+		{
+			System.out.println(p);
+		} }
 
 }
