@@ -4,6 +4,8 @@ import com.commerce.Models.Produit;
 import com.commerce.Repository.ProduitRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class ProduitServiceImpl  implements ProduitService{
 
@@ -16,5 +18,20 @@ public class ProduitServiceImpl  implements ProduitService{
     @Override
     public Produit addProduit(Produit produit) {
         return produitRepository.save(produit);
+    }
+
+    @Override
+    public Produit update(Produit produit) {
+        return produitRepository.save(produit);
+    }
+
+    @Override
+    public List<Produit> getAllProduit() {
+        return this.produitRepository.findAll();
+    }
+
+    @Override
+    public Produit getProduitById(Long id) {
+        return this.produitRepository.findById(id).get();
     }
 }

@@ -13,6 +13,7 @@ import java.util.Date;
 @Getter
 @Setter
 @Builder
+@ToString
 @Entity
 public class Produit {
     @Id

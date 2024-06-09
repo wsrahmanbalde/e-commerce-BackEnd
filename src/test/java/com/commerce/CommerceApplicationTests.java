@@ -19,4 +19,9 @@ class CommerceApplicationTests {
 		);
 	}
 
+	@Test
+	void contextLoad() {
+		System.out.println(repository.findAll());
+	}
+
 }
